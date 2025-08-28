@@ -9,7 +9,7 @@ import { Course } from '../model/course';
 export class CoursesService {
 
   // Properties
-  private url: string = "public/ramschema.json";
+  private url: string = "assets/ramschema.json";
 
   constructor(private http: HttpClient) { }
 

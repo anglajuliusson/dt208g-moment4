@@ -5,7 +5,8 @@ import { CommonModule, NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-courses',
-  imports: [CommonModule],
+  standalone: true,
+  imports: [CommonModule, NgFor],
   templateUrl: './courses.component.html',
   styleUrl: './courses.component.css'
 })

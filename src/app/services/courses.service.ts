@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -8,5 +9,5 @@ export class CoursesService {
    // Properties
    private url: string = "public/ramschema.json";
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 }

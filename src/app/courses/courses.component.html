@@ -1,1 +1,18 @@
-<p>courses works!</p>
+<h1>Webbutveckling - Ramschema</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Kurskod</th>
+            <th>Kursnamn</th>
+            <th>Progression</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let course of courselist">
+            <td>{{ course.code}}</td>
+            <td>{{ course.coursename}}</td>
+            <td>{{ course.progression}}</td>
+        </tr>
+    </tbody>
+</table>

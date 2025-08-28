@@ -5,5 +5,8 @@ import { Injectable } from '@angular/core';
 })
 export class CoursesService {
 
+   // Properties
+   private url: string = "public/ramschema.json";
+
   constructor() { }
 }

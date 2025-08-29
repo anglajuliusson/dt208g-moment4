@@ -2,19 +2,19 @@
 
 <div class="search">
     <h2>Sök:</h2>
-    <input type="text" id="search" placeholder="Sök efter kurskod eller kursnamn">
+    <input type="text" id="search" placeholder="Sök efter kurskod eller kursnamn" [(ngModel)]="search" (input)="filterData()">
 </div>
 
 <table>
     <thead>
         <tr>
-            <th>Kurskod</th>
-            <th>Kursnamn</th>
-            <th>Progression</th>
+            <th (click)="sortBy('code')">Kurskod</th>
+            <th (click)="sortBy('coursename')">Kursnamn</th>
+            <th (click)="sortBy('progression')">Progression</th>
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let course of courselist">
+        <tr *ngFor="let course of sortedCourseList">
             <td>{{ course.code}}</td>
             <td>{{ course.coursename}}</td>
             <td>{{ course.progression}}</td>
